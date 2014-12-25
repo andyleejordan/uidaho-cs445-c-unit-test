@@ -1,0 +1,31 @@
+#+title: Simple C Unit Test Framework
+
+This is a simple unit test framework for C programs and libraries,
+originally created for my data structures in my
+[[https://github.com/andschwa/uidaho-cs445][120++ Compiler]].
+
+* Usage
+A unit test suite should be a simple C program which includes
+=test.h=, and declares tests in =main()=. I use one program per test
+suite, so that failures are contained to that suite. It should return
+=status= to report success or failure.
+
+** running
+A suite of tests should begin with =running("test suite message")=,
+which accepts a format string followed by its arguments. This message
+will only be printed (to =stdout=) if =TEST_DEBUG= is defined. It sets
+the test suite's ext status to =EXIT_SUCCESS=.
+
+** testing
+A single test should begin with =testing("unit test message")=, which
+again accepts a format string. This message will only be printed (to
+=stdout=) if =TEST_DEBUG= is defined.
+
+** failure
+If a failure condition occurs, =failure("error message")= should be
+called, which again accepts a format string. This message will always
+be printed (to =stderr=), and so should exist as the body to an =if=
+statement. It sets the test suite's exit status to =EXIT_FAILURE=,
+which should be returned at the end of the suite's execution.
+
+* TODO Link to list, tree, and hasht examples
