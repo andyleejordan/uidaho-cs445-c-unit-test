@@ -6,19 +6,20 @@
  * This file released under the AGPLv3 license.
  */
 
+#include <stdlib.h>
 #include <stdarg.h>
 
 #include "test.h"
 
 void running(const char *format, ...)
 {
+	status = EXIT_SUCCESS;
+
 	if (!TEST_DEBUG)
 		return;
 
 	va_list ap;
 	va_start(ap, format);
-
-	status = EXIT_SUCCESS;
 
 	printf("RUNNING: ");
 	vprintf(format, ap);
