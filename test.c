@@ -6,15 +6,9 @@
  * This file released under the AGPLv3 license.
  */
 
-#include <string.h>
 #include <stdarg.h>
 
 #include "test.h"
-
-bool compare(const char *a, const char *b)
-{
-	return (0 == strcmp(a, b));
-}
 
 void running(const char *format, ...)
 {

@@ -17,7 +17,6 @@ bool TEST_DEBUG;
 
 int status;
 
-bool compare(const char *a, const char *b);
 void running(const char *format, ...);
 void testing(const char *format, ...);
 void failure(const char *format, ...);
