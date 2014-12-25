@@ -1,5 +1,5 @@
 /*
- * test/test.c - Implementation of test framework interface.
+ * test.c - Implementation of test framework interface.
  *
  * Copyright (C) 2014 Andrew Schwartzmeyer
  *

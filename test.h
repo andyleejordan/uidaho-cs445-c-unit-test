@@ -1,5 +1,5 @@
 /*
- * test/test.h - Basic test framework interface.
+ * test.h - Simple C Unit Test Framework interface.
  *
  * Copyright (C) 2014 Andrew Schwartzmeyer
  *
