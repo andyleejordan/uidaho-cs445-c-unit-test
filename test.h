@@ -10,9 +10,10 @@
 #define TEST_H
 
 #include <stdio.h>
-#include <stdbool.h>
 
-bool TEST_DEBUG;
+#ifndef TEST_DEBUG
+#define TEST_DEBUG 0
+#endif
 
 int status;
 
